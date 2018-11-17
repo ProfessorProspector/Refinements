@@ -1,0 +1,12 @@
+{
+  "id": "swampsapling",
+  "name": "Swamp Sapling",
+  "version": "0.1.0",
+  "side": "universal",
+  "initializer": "prospector.swampsapling.SwampSapling",
+  "description": "Adds swamp saplings and swamp leaves for swamp trees!",
+  "mixins": {
+    "client": "swampsapling.client.json",
+    "common": "swampsapling.common.json"
+  }
+}
