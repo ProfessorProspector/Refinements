@@ -6,7 +6,7 @@ import net.minecraft.gui.CreativeTab;
 import net.minecraft.item.Item;
 import net.minecraft.item.block.ItemBlock;
 import net.minecraft.util.registry.Registry;
-import prospector.swampsapling.block.SwampLSCompound;
+import net.minecraft.block.SwampLSCompound;
 
 public class SwampSapling implements ModInitializer {
 	public static final Block swampLeaves;

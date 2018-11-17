@@ -1,4 +1,4 @@
-package prospector.swampsapling.block;
+package net.minecraft.block;
 
 import net.minecraft.world.gen.config.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.SwampTreeFeature;
