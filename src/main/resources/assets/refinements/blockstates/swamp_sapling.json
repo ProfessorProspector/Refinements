@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "refinements:block/swamp_sapling"
+    },
+    "stage=1": {
+      "model": "refinements:block/swamp_sapling"
+    }
+  }
+}

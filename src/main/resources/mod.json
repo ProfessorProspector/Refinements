@@ -1,12 +1,12 @@
 {
-  "id": "swampsapling",
-  "name": "Swamp Sapling",
+  "id": "refinements",
+  "name": "Refinements",
   "version": "0.1.0",
   "side": "universal",
-  "initializer": "prospector.swampsapling.SwampSapling",
-  "description": "Adds swamp saplings and swamp leaves for swamp trees!",
+  "initializer": "prospector.refinements.Refinements",
+  "description": "Adds small features and tweaks that fit along nicely with vanilla.",
   "mixins": {
-    "client": "swampsapling.client.json",
-    "common": "swampsapling.common.json"
+    "client": "refinements.client.json",
+    "common": "refinements.common.json"
   }
 }
