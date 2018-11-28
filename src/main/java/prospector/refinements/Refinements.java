@@ -20,7 +20,7 @@ public class Refinements implements ModInitializer {
 
 	static {
 		SWAMP_LEAVES = register("swamp_leaves", new SilkLeavesBlock(null), ItemGroup.DECORATIONS);
-		SWAMP_SAPLING = register("swamp_sapling", new SilkSaplingBlock(new SilkSaplingGenerator(new SwampTreeFeature(DefaultFeatureConfig::make))), ItemGroup.DECORATIONS);
+		SWAMP_SAPLING = register("swamp_sapling", new SilkSaplingBlock(new SilkSaplingGenerator(new SwampTreeFeature(DefaultFeatureConfig::deserialize))), ItemGroup.DECORATIONS);
 	}
 
 	private static Block register(String name, Block block, ItemGroup tab) {
