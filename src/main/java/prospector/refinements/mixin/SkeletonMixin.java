@@ -1,11 +1,11 @@
 package prospector.refinements.mixin;
 
-import net.minecraft.class_1383;
 import net.minecraft.class_3745;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ai.goal.CrossbowAttackGoal;
+import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.tracker.TrackedData;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,7 +27,8 @@ public abstract class SkeletonMixin extends HostileEntity implements class_3745 
 
 	@Inject(at = @At("RETURN"), method = "method_5959()V")
 	public void addAIGoals(CallbackInfo callbackInfo) {
-		goalSelector.add(3, new class_1383((AbstractSkeletonEntity) (Object) this, 1.0D, 8.0F));
+		//noinspection unchecked
+		goalSelector.add(3, new CrossbowAttackGoal((AbstractSkeletonEntity) (Object) this, 1.0D, 8.0F));
 	}
 
 	@Override

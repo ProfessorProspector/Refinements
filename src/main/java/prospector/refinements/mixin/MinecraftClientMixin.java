@@ -1,6 +1,7 @@
 package prospector.refinements.mixin;
 
-import net.minecraft.client.MinecraftGame;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.block.BlockColorMap;
 import net.minecraft.client.render.item.ItemColorMap;
 import net.minecraft.item.block.BlockItem;
@@ -13,8 +14,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import prospector.refinements.Refinements;
 
-@Mixin(MinecraftGame.class)
-public abstract class MinecraftGameMixin {
+@Mixin(MinecraftClient.class)
+public abstract class MinecraftClientMixin {
 
 	@Shadow private ItemColorMap itemColorMap;
 
@@ -26,7 +27,7 @@ public abstract class MinecraftGameMixin {
 	@Inject(at = @At("RETURN"), method = "init()V")
 	public void afterInit(CallbackInfo info) {
 		getBlockColorMap().register((var0x, var1, var2, var3) -> Biomes.SWAMP.getFoliageColorAt(BlockPos.ORIGIN), Refinements.SWAMP_LEAVES);
-		itemColorMap.method_1708((var1x, var2x) -> blockColorMap.getRenderColor(((BlockItem) var1x.getItem()).getBlock().getDefaultState(), null, null, var2x), Refinements.SWAMP_LEAVES);
-		//		itemColorMap.method_1708((var1x, var2x) -> blockColorMap.getRenderColor(((ItemBlock) var1x.getItem()).getBlock().getDefaultState(), MinecraftGame.getInstance().player.world, new BlockPos(MinecraftGame.getInstance().player), var2x), Refinements.SWAMP_LEAVES);
+		itemColorMap.method_1708((var1x, var2x) -> blockColorMap.getRenderColor(((BlockItem) var1x.getItem()).getBlock().getDefaultState(), MinecraftClient.getInstance().player.world, new BlockPos(MinecraftClient.getInstance().player), var2x), Blocks.GRASS_BLOCK, Blocks.GRASS, Blocks.FERN, Blocks.VINE, Blocks.OAK_LEAVES, Blocks.SPRUCE_LEAVES, Blocks.BIRCH_LEAVES, Blocks.JUNGLE_LEAVES, Blocks.ACACIA_LEAVES, Blocks.DARK_OAK_LEAVES, Blocks.LILY_PAD, Blocks.TALL_GRASS, Blocks.LARGE_FERN, Refinements.SWAMP_LEAVES);
+
 	}
 }
