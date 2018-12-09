@@ -3,8 +3,8 @@ package prospector.refinements;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.block.BlockItem;
-import net.minecraft.sortme.ItemGroup;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.config.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.SwampTreeFeature;
@@ -25,7 +25,7 @@ public class Refinements implements ModInitializer {
 
 	private static Block register(String name, Block block, ItemGroup tab) {
 		Registry.register(Registry.BLOCKS, MOD_ID + ":" + name, block);
-		BlockItem item = new BlockItem(block, new Item.Builder().itemGroup(tab));
+		BlockItem item = new BlockItem(block, new Item.Settings().itemGroup(tab));
 		item.registerBlockItemMap(Item.BLOCK_ITEM_MAP, item);
 		register(name, item);
 		return block;
