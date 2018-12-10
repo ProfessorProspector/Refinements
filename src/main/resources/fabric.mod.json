@@ -6,7 +6,7 @@
   "initializer": "prospector.refinements.Refinements",
   "description": "Adds small features and tweaks that fit along nicely with vanilla.",
   "mixins": {
-    "client": "refinements.client.json",
-    "common": "refinements.common.json"
+	"client": "mixins.refinements.client.json",
+	"common": "mixins.refinements.common.json"
   }
 }
