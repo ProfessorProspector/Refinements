@@ -1,4 +1,4 @@
-package prospector.refinements;
+package io.github.prospector.refinements;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.Block;
@@ -8,9 +8,9 @@ import net.minecraft.item.block.BlockItem;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.config.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.SwampTreeFeature;
-import prospector.silk.block.SilkLeavesBlock;
-import prospector.silk.block.SilkSaplingBlock;
-import prospector.silk.util.SilkSaplingGenerator;
+import io.github.prospector.silk.block.SilkLeavesBlock;
+import io.github.prospector.silk.block.SilkSaplingBlock;
+import io.github.prospector.silk.util.SilkSaplingGenerator;
 
 public class Refinements implements ModInitializer {
 	public static final String MOD_ID = "refinements";

@@ -26,7 +26,7 @@ apply plugin: 'maven-publish'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-group = "prospector.refinements"
+group = "io.github.prospector.refinements"
 archivesBaseName = "Refinements"
 version = "0.1.0"
 
@@ -43,7 +43,7 @@ dependencies {
 	mappings "net.fabricmc:yarn:18w49a.1"
 	modCompile "net.fabricmc:fabric-loader:0.2.0.60"
 	modCompile "net.fabricmc:fabric:0.1.0.36"
-	modCompile "prospector.silk:SilkAPI:+"
+	modCompile "io.github.prospector.silk:SilkAPI:+"
 }
 
 uploadArchives {

@@ -1,12 +1,12 @@
 {
   "required": true,
-  "package": "prospector.refinements.mixin",
+  "package": "io.github.prospector.refinements.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "SwampMixin",
-    "SkeletonMixin"
+	"SkeletonMixin",
+	"SwampMixin"
   ],
   "injectors": {
-    "defaultRequire": 1
+	"defaultRequire": 1
   }
 }

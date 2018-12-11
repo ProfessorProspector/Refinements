@@ -3,7 +3,7 @@
   "name": "Refinements",
   "version": "0.1.0",
   "side": "universal",
-  "initializer": "prospector.refinements.Refinements",
+  "initializer": "io.github.prospector.refinements.Refinements",
   "description": "Adds small features and tweaks that fit along nicely with vanilla.",
   "mixins": {
 	"client": "mixins.refinements.client.json",

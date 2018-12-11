@@ -1,4 +1,4 @@
-package prospector.refinements.mixin;
+package io.github.prospector.refinements.mixin;
 
 import net.minecraft.class_3745;
 import net.minecraft.entity.EntityType;

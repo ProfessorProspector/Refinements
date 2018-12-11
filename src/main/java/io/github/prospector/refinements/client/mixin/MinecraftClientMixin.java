@@ -1,4 +1,4 @@
-package prospector.refinements.mixin;
+package io.github.prospector.refinements.client.mixin;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import prospector.refinements.Refinements;
+import io.github.prospector.refinements.Refinements;
 
 @Mixin(MinecraftClient.class)
 public abstract class MinecraftClientMixin {
