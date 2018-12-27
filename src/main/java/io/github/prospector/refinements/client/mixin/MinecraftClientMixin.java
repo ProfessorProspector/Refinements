@@ -1,6 +1,7 @@
 package io.github.prospector.refinements.client.mixin;
 
 import io.github.prospector.refinements.Refinements;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.block.BlockColorMap;
@@ -27,7 +28,14 @@ public abstract class MinecraftClientMixin {
 	@Inject(at = @At("RETURN"), method = "init()V")
 	public void afterInit(CallbackInfo info) {
 		getBlockColorMap().register((var0x, var1, var2, var3) -> Biomes.SWAMP.getFoliageColorAt(BlockPos.ORIGIN), Refinements.SWAMP_LEAVES);
-		itemColorMap.register((var1x, var2x) -> blockColorMap.getRenderColor(((BlockItem) var1x.getItem()).getBlock().getDefaultState(), MinecraftClient.getInstance().player.world, new BlockPos(MinecraftClient.getInstance().player), var2x), Blocks.GRASS_BLOCK, Blocks.GRASS, Blocks.FERN, Blocks.VINE, Blocks.OAK_LEAVES, Blocks.SPRUCE_LEAVES, Blocks.BIRCH_LEAVES, Blocks.JUNGLE_LEAVES, Blocks.ACACIA_LEAVES, Blocks.DARK_OAK_LEAVES, Blocks.LILY_PAD, Blocks.TALL_GRASS, Blocks.LARGE_FERN, Refinements.SWAMP_LEAVES);
+		itemColorMap.register((stack, tintIndex) -> {
+			if (MinecraftClient.getInstance().player != null && MinecraftClient.getInstance().world != null) {
+				return blockColorMap.getRenderColor(((BlockItem) stack.getItem()).getBlock().getDefaultState(), MinecraftClient.getInstance().player.world, new BlockPos(MinecraftClient.getInstance().player), tintIndex);
+			} else {
+				BlockState blockState_1 = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
+				return blockColorMap.getRenderColor(blockState_1, null, null, tintIndex);
+			}
+		}, Blocks.GRASS_BLOCK, Blocks.GRASS, Blocks.FERN, Blocks.VINE, Blocks.OAK_LEAVES, Blocks.SPRUCE_LEAVES, Blocks.BIRCH_LEAVES, Blocks.JUNGLE_LEAVES, Blocks.ACACIA_LEAVES, Blocks.DARK_OAK_LEAVES, Blocks.LILY_PAD, Blocks.TALL_GRASS, Blocks.LARGE_FERN, Refinements.SWAMP_LEAVES);
 
 	}
 }
