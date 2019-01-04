@@ -14,9 +14,9 @@ public class SwampMixin {
 	@Shadow
 	@Final
 	@Mutable
-	private static BlockState field_13886;
+	private static BlockState LEAVES;
 
 	static {
-		field_13886 = Refinements.SWAMP_LEAVES.getDefaultState();
+		LEAVES = Refinements.SWAMP_LEAVES.getDefaultState();
 	}
 }
