@@ -1,7 +1,7 @@
 {
   "id": "refinements",
   "name": "Refinements",
-  "version": "1.0.0",
+  "version": "$version",
   "side": "universal",
   "initializer": "io.github.prospector.refinements.Refinements",
   "description": "Adds small features and tweaks that fit along nicely with vanilla.",
