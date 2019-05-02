@@ -1,16 +1,31 @@
 {
+  "schemaVersion": 1,
   "id": "refinements",
   "name": "Refinements",
   "version": "$version",
-  "side": "universal",
-  "initializer": "io.github.prospector.refinements.Refinements",
+  "environment": "*",
+  "license": "MIT",
+  "icon": "assets/refinements/icon.png",
+  "entrypoints": {
+	"main": [
+	  "io.github.prospector.refinements.Refinements"
+	]
+  },
+  "contact": {
+	"homepage": "https://minecraft.curseforge.com/projects/refinements",
+	"issues": "https://github.com/Prospector/Refinements/issues"
+  },
   "requires": {
 	"fabric": "*",
 	"silk": "*"
   },
+  "authors": [
+	"Prospector"
+  ],
+  "contributors": [
+  ],
   "description": "Adds small features and tweaks that fit along nicely with vanilla.",
-  "mixins": {
-	"client": "mixins.refinements.client.json",
-	"common": "mixins.refinements.common.json"
-  }
+  "mixins": [
+	"mixins.refinements.json"
+  ]
 }
